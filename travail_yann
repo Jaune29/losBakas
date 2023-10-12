@@ -1,1 +1,36 @@
+Travail yann 
 
+-code de la frequence cardiaque:
+from microbit import *
+
+lebon = 0
+lemauvais = 0
+frequence = 0
+while True:
+    frequence = 0
+    lebon = 0
+    lemauvais = 0
+    for i in range(1000):
+        sleep(10)
+        print(frequence)
+        if pin2.read_digital() == 1:
+            lemauvais += 1
+            if lemauvais == 1:
+                lebon += 1
+        if pin2.read_digital() == 0:
+            lemauvais = 0
+        frequence = lebon 
+    display.scroll(frequence)
+
+-code du comptage:
+        if pin2.read_digital() == 1:
+            lemauvais += 1
+            if lemauvais == 1:
+                lebon += 1
+        if pin2.read_digital() == 0:
+            lemauvais = 0
+        display.scroll(lebon)
+        
+
+
+    
